@@ -15,17 +15,17 @@ class CreateOwnersTable extends Migration
     {
         Schema::create('owners', function (Blueprint $table) {
             $table->id();
-            $table->string('owner_name', 50);
-            $table->string('owner_email', 50);
-            $table->string('owner_phone1', 14);
-            $table->string('owner_phone2', 14);
-            $table->string('owner_address', 50);
-            $table->string('owner_registration', 50)->unique();
-            $table->string('pet_name', 50);
-            $table->string('pet_breed', 50);
-            $table->string('pet_gender', 10);
-            $table->string('pet_colour', 20);
-            $table->string('pet_breeder_address', 100);
+            $table->string('owner_name')->default('')->nullable();
+            $table->string('owner_email')->default('')->nullable();
+            $table->string('owner_phone1')->default('')->nullable();
+            $table->string('owner_phone2')->default('')->nullable();
+            $table->string('owner_address')->default('')->nullable();
+            $table->string('owner_registration')->unique()->default('1');
+            $table->string('pet_name')->default('')->nullable();
+            $table->string('pet_breed')->default('')->nullable();
+            $table->string('pet_gender')->default('')->nullable();
+            $table->string('pet_colour')->default('')->nullable();
+            $table->string('pet_breeder_address')->default('')->nullable();
             $table->timestamps();
         });
     }

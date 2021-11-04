@@ -30,4 +30,40 @@
             </div>
         </div>
     @endif
+
+    @if(isset($vaccinesDue))
+        <div class="py-12">
+            <h1 class="text-gray-900 font-bold text-center underline pb-6">Upcoming Vaccines</h1>
+            <div class="max-w-7xl mx-auto p-8 bg-white rounded-lg shadow-sm">
+                <table class="block md:table overflow-x-auto whitespace-nowrap w-full rounded-t mx-auto text-gray-800">
+                    <thead>
+                    <tr class="text-left border-b-2">
+                        <th class="px-4 py-3">S. No.</th>
+                        <th class="px-4 py-3">Owner</th>
+                        <th class="px-4 py-3">Phone</th>
+                        <th class="px-4 py-3">Pet</th>
+                        <th class="px-4 py-3">Vaccine</th>
+                        <th class="px-4 py-3">Due Date</th>
+                    </tr>
+                    </thead>
+
+                    <tbody>
+                    @foreach( $vaccinesDue as $vaccine)
+                        <tr class="border-b border-gray-200">
+                            <td class="px-4 py-3">{{ $loop->iteration }}</td>
+                            <td class="px-4 py-3">{{ $vaccine['Owner'] }}</td>
+                            <td class="px-4 py-3">{{ $vaccine['Phone'] }}</td>
+                            <td class="px-4 py-3">{{ $vaccine['Pet'] }}</td>
+                            <td class="px-4 py-3">{{ $vaccine['Vaccine'] }}</td>
+                            @if ($vaccine['Days'][0] === '-')
+                                <td class="px-4 py-3 text-red-700">{{ $vaccine['Days'] }} Days</td>
+                            @else <td class="px-4 py-3 text-green-700">{{ $vaccine['Days'] }} Days</td>
+                            @endif
+                        </tr>
+                    @endforeach
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    @endif
 </x-app-layout>

@@ -15,13 +15,13 @@ class CreateVaccinesTable extends Migration
     {
         Schema::create('vaccines', function (Blueprint $table) {
             $table->id();
-            $table->string('owner_registration', 50);
-            $table->string('vaccine_name', 20);
-            $table->string('vaccine_label', 20);
-            $table->string('vaccinator', 50);
-            $table->string('vaccine_date', 14);
-            $table->string('next_due_date', 14);
-            $table->string('remarks', 50);
+            $table->string('owner_registration')->default('')->nullable();
+            $table->string('vaccine_name')->default('')->nullable();
+            $table->string('vaccine_label')->default('')->nullable();
+            $table->string('vaccinator')->default('')->nullable();
+            $table->string('vaccine_date')->default('')->nullable();
+            $table->string('next_due_date')->default('')->nullable();
+            $table->string('remarks')->default('')->nullable();
             $table->timestamps();
         });
     }

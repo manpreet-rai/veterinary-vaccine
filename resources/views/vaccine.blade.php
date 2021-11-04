@@ -5,33 +5,33 @@
                 @csrf
                 <span class="block font-medium">Owner Details</span>
                 <div class="flex flex-col md:flex-row space-y-6 space-x-0 md:space-y-0 md:space-x-6 mt-2">
-                    <input class="text w-full text-gray-900 py-2 px-4 border-2 border-gray-300 rounded outline-none focus:outline-none focus:border-gray-600" type="text" name="owner_name" id="owner_name" title="Owner Name" placeholder="Owner Name (Required)" value="{{ $owner->owner_name }}" size="50" required>
-                    <input class="text w-full text-gray-900 py-2 px-4 border-2 border-gray-300 rounded outline-none focus:outline-none focus:border-gray-600" type="text" name="owner_email" id="owner_email" title="Owner Email" placeholder="Owner Email" value="{{ $owner->owner_email }}"  size="50" required>
+                    <input class="text w-full text-gray-900 py-2 px-4 border-2 border-gray-300 rounded outline-none focus:outline-none focus:border-gray-600" type="text" name="owner_name" id="owner_name" title="Owner Name" placeholder="Owner Name" value="{{ $owner->owner_name }}">
+                    <input class="text w-full text-gray-900 py-2 px-4 border-2 border-gray-300 rounded outline-none focus:outline-none focus:border-gray-600" type="email" name="owner_email" id="owner_email" title="Owner Email" placeholder="Owner Email" value="{{ $owner->owner_email }}" required>
                 </div>
 
                 <div class="flex flex-col md:flex-row space-y-6 space-x-0 md:space-y-0 md:space-x-6 mt-6">
-                    <input class="text w-full text-gray-900 py-2 px-4 border-2 border-gray-300 rounded outline-none focus:outline-none focus:border-gray-600" type="tel" name="owner_phone1" id="owner_phone1" title="Primary Phone No." placeholder="Primary Phone No. (Required)" value="{{ $owner->owner_phone1 }}"  size="14" required>
-                    <input class="text w-full text-gray-900 py-2 px-4 border-2 border-gray-300 rounded outline-none focus:outline-none focus:border-gray-600" type="tel" name="owner_phone2" id="owner_phone2" title="Other Phone No." placeholder="Other Phone No." value="{{ $owner->owner_phone2 }}" required size="14">
+                    <input class="text w-full text-gray-900 py-2 px-4 border-2 border-gray-300 rounded outline-none focus:outline-none focus:border-gray-600" type="tel" name="owner_phone1" id="owner_phone1" title="Primary Phone No." placeholder="Primary Phone No." value="{{ $owner->owner_phone1 }}">
+                    <input class="text w-full text-gray-900 py-2 px-4 border-2 border-gray-300 rounded outline-none focus:outline-none focus:border-gray-600" type="tel" name="owner_phone2" id="owner_phone2" title="Other Phone No." placeholder="Other Phone No." value="{{ $owner->owner_phone2 }}">
                 </div>
 
                 <div class="flex flex-col md:flex-row space-y-6 space-x-0 md:space-y-0 md:space-x-6 mt-6">
-                    <input class="text w-full text-gray-900 py-2 px-4 border-2 border-gray-300 rounded outline-none focus:outline-none focus:border-gray-600" type="text" name="owner_address" id="owner_address" title="Address" placeholder="Address (Required)" value="{{ $owner->owner_address }}"  size="50" required>
-                    <input class="text w-full text-gray-900 py-2 px-4 border-2 border-gray-300 bg-gray-100 rounded outline-none focus:outline-none focus:border-gray-600" type="text" name="owner_registration" id="owner_registration" title="Registration No." placeholder="Reg. No. (Required)" value="{{ $owner->owner_registration }}"  size="50" disabled required>
+                    <input class="text w-full text-gray-900 py-2 px-4 border-2 border-gray-300 rounded outline-none focus:outline-none focus:border-gray-600" type="text" name="owner_address" id="owner_address" title="Address" placeholder="Address" value="{{ $owner->owner_address }}">
+                    <input class="text w-full text-gray-900 py-2 px-4 border-2 border-gray-300 bg-gray-100 rounded outline-none focus:outline-none focus:border-gray-600" type="text" name="owner_registration" id="owner_registration" title="Registration No." placeholder="Reg. No." value="{{ $owner->owner_registration }}" required disabled>
                 </div>
 
                 <span class="block font-medium mt-6">Pet Details</span>
                 <div class="flex flex-col md:flex-row space-y-6 space-x-0 md:space-y-0 md:space-x-6 mt-2">
-                    <input class="text w-full text-gray-900 py-2 px-4 border-2 border-gray-300 rounded outline-none focus:outline-none focus:border-gray-600" type="text" name="pet_name" id="pet_name" title="Pet Name" placeholder="Pet Name (Required)" value="{{ $owner->pet_name }}"  size="50" required>
-                    <input class="text w-full text-gray-900 py-2 px-4 border-2 border-gray-300 rounded outline-none focus:outline-none focus:border-gray-600" type="text" name="pet_breed" id="pet_breed" title="Pet Breed" placeholder="Pet Breed (Required)" value="{{ $owner->pet_breed }}"  size="50" required>
+                    <input class="text w-full text-gray-900 py-2 px-4 border-2 border-gray-300 rounded outline-none focus:outline-none focus:border-gray-600" type="text" name="pet_name" id="pet_name" title="Pet Name" placeholder="Pet Name" value="{{ $owner->pet_name }}">
+                    <input class="text w-full text-gray-900 py-2 px-4 border-2 border-gray-300 rounded outline-none focus:outline-none focus:border-gray-600" type="text" name="pet_breed" id="pet_breed" title="Pet Breed" placeholder="Pet Breed" value="{{ $owner->pet_breed }}">
                 </div>
 
                 <div class="flex flex-col md:flex-row space-y-6 space-x-0 md:space-y-0 md:space-x-6 mt-6">
-                    <input class="text w-full text-gray-900 py-2 px-4 border-2 border-gray-300 rounded outline-none focus:outline-none focus:border-gray-600" type="text" name="pet_gender" id="pet_gender" title="Pet Gender" placeholder="Pet Gender (Required)" value="{{ $owner->pet_gender }}"  size="14" required>
-                    <input class="text w-full text-gray-900 py-2 px-4 border-2 border-gray-300 rounded outline-none focus:outline-none focus:border-gray-600" type="text" name="pet_colour" id="pet_colour" title="Pet Colour" placeholder="Pet Colour (Required)" value="{{ $owner->pet_colour }}"  size="14" required>
+                    <input class="text w-full text-gray-900 py-2 px-4 border-2 border-gray-300 rounded outline-none focus:outline-none focus:border-gray-600" type="text" name="pet_gender" id="pet_gender" title="Pet Gender" placeholder="Pet Gender" value="{{ $owner->pet_gender }}">
+                    <input class="text w-full text-gray-900 py-2 px-4 border-2 border-gray-300 rounded outline-none focus:outline-none focus:border-gray-600" type="text" name="pet_colour" id="pet_colour" title="Pet Colour" placeholder="Pet Colour" value="{{ $owner->pet_colour }}">
                 </div>
 
                 <div class="flex flex-col md:flex-row space-y-6 space-x-0 md:space-y-0 md:space-x-6 mt-6">
-                    <input class="text w-full text-gray-900 py-2 px-4 border-2 border-gray-300 rounded outline-none focus:outline-none focus:border-gray-600" type="text" name="pet_breeder_address" id="pet_breeder_address" title="Breeder Address" placeholder="Breeder Address" value="{{ $owner->pet_breeder_address }}" required size="100">
+                    <input class="text w-full text-gray-900 py-2 px-4 border-2 border-gray-300 rounded outline-none focus:outline-none focus:border-gray-600" type="text" name="pet_breeder_address" id="pet_breeder_address" title="Breeder Address" placeholder="Breeder Address" value="{{ $owner->pet_breeder_address }}">
                 </div>
 
                 <div class="flex flex-col md:flex-row space-y-2 space-x-0 md:space-y-0 md:space-x-2 mt-6">
@@ -49,15 +49,15 @@
             <form id="blankVaccineTemplate" method="POST" action="/add-vaccine-record">
                 @csrf
                 <div class="flex flex-col md:flex-row space-y-6 space-x-0 md:space-y-0 md:space-x-6 mt-2">
-                    <input class="text w-full text-gray-900 py-2 px-4 border-2 border-gray-300 rounded outline-none focus:outline-none focus:border-gray-600" type="text" name="vaccine_name" id="vaccine_name" title="Vaccine Name" placeholder="Vaccine Name (Required)" size="20" required>
-                    <input class="text w-full text-gray-900 py-2 px-4 border-2 border-gray-300 rounded outline-none focus:outline-none focus:border-gray-600" type="text" name="vaccine_label" id="vaccine_label" title="Vaccine Label" placeholder="Vaccine Label (Required)" size="20" required>
-                    <input class="text w-full text-gray-900 py-2 px-4 border-2 border-gray-300 rounded outline-none focus:outline-none focus:border-gray-600" type="text" name="vaccinator" id="vaccinator" title="Vaccinator" placeholder="Vaccinator (Required)" size="50" required>
+                    <input class="text w-full text-gray-900 py-2 px-4 border-2 border-gray-300 rounded outline-none focus:outline-none focus:border-gray-600" type="text" name="vaccine_name" id="vaccine_name" title="Vaccine Name" placeholder="Vaccine Name" required>
+                    <input class="text w-full text-gray-900 py-2 px-4 border-2 border-gray-300 rounded outline-none focus:outline-none focus:border-gray-600" type="text" name="vaccine_label" id="vaccine_label" title="Vaccine Label" placeholder="Vaccine Label" required>
+                    <input class="text w-full text-gray-900 py-2 px-4 border-2 border-gray-300 rounded outline-none focus:outline-none focus:border-gray-600" type="text" name="vaccinator" id="vaccinator" title="Vaccinator" placeholder="Vaccinator" required>
                 </div>
 
                 <div class="flex flex-col md:flex-row space-y-6 space-x-0 md:space-y-0 md:space-x-6 mt-6">
-                    <input class="text w-full text-gray-900 py-2 px-4 border-2 border-gray-300 rounded outline-none focus:outline-none focus:border-gray-600" type="date" name="vaccine_date" id="vaccine_date" title="Vaccine Date" value="{{ date('Y-m-d') }}" placeholder="Vaccine Date. (Required)" size="14" required>
-                    <input class="text w-full text-gray-900 py-2 px-4 border-2 border-gray-300 rounded outline-none focus:outline-none focus:border-gray-600" type="date" name="next_due_date" id="next_due_date" title="Next Due Date" value="{{ date('Y-m-d') }}" placeholder="Next Due Date" size="14" required>
-                    <input class="text w-full text-gray-900 py-2 px-4 border-2 border-gray-300 rounded outline-none focus:outline-none focus:border-gray-600" type="text" name="remarks" id="remarks" title="Remarks" placeholder="Remarks" size="50" value="Remarks (Optional)" required>
+                    <input class="text w-full text-gray-900 py-2 px-4 border-2 border-gray-300 rounded outline-none focus:outline-none focus:border-gray-600" type="date" name="vaccine_date" id="vaccine_date" title="Vaccine Date" value="{{ date('Y-m-d') }}" placeholder="Vaccine Date" required>
+                    <input class="text w-full text-gray-900 py-2 px-4 border-2 border-gray-300 rounded outline-none focus:outline-none focus:border-gray-600" type="date" name="next_due_date" id="next_due_date" title="Next Due Date" value="{{ date('Y-m-d') }}" placeholder="Next Due Date" required>
+                    <input class="text w-full text-gray-900 py-2 px-4 border-2 border-gray-300 rounded outline-none focus:outline-none focus:border-gray-600" type="text" name="remarks" id="remarks" title="Remarks" placeholder="Remarks">
                 </div>
 
                 <div class="flex flex-col md:flex-row space-y-2 space-x-0 md:space-y-0 md:space-x-2 mt-6">
@@ -84,6 +84,7 @@
                         <th class="px-4 py-3">Vaccine Date</th>
                         <th class="px-4 py-3">Next Due Date</th>
                         <th class="px-4 py-3">Remarks</th>
+                        <th class="px-4 py-3">Edit</th>
                     </tr>
                     </thead>
 
@@ -97,6 +98,14 @@
                             <td class="px-4 py-3">{{ $vaccine->vaccine_date }}</td>
                             <td class="px-4 py-3">{{ $vaccine->next_due_date }}</td>
                             <td class="px-4 py-3">{{ $vaccine->remarks }}</td>
+                            <td class="px-4 py-3">
+                                <a href="/edit/{{ $vaccine->id }}">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000">
+                                        <path d="M0 0h24v24H0V0z" fill="none"/>
+                                        <path d="M14.06 9.02l.92.92L5.92 19H5v-.92l9.06-9.06M17.66 3c-.25 0-.51.1-.7.29l-1.83 1.83 3.75 3.75 1.83-1.83c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.2-.2-.45-.29-.71-.29zm-3.6 3.19L3 17.25V21h3.75L17.81 9.94l-3.75-3.75z"/>
+                                    </svg>
+                                </a>
+                            </td>
                         </tr>
                     @endforeach
                     </tbody>
