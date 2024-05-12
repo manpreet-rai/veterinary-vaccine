@@ -1,10 +1,9 @@
 ## Veterinarian Vaccine Website
 ## Vaccine portal for pets. Keeps track of all types of vaccines for pets.
 
-This repo contains source code for [Vaccine Portal Doaba Pet Care]('https://vaccine.doabapetcare.in')
+This repo contains source code for [Vaccine Portal Doaba Pet Care](https://vaccine.doabapetcare.in)
 
-![Vaccine](https://github.com/manpreet-rai/veterinary-vaccine/assets/149692162/085a05b7-cb61-493f-becb-e481c7c2643a)
-
+![Vaccine](https://github.com/manpreet-rai/veterinary-vaccine/assets/149692162/ef514a40-a36c-41dd-bb4d-c928066744f8)
 
 ## Technologies Used:
 ### Frontend
